@@ -1,0 +1,73 @@
+{
+ "toplam_slot": 50000,
+ "sahneler": [
+  {
+   "slot": 1,
+   "ad": "Işık perdesi",
+   "kimlik": "CLAUDE · claude-opus-5-5",
+   "teslim_eden": "CLAUDE · claude-opus-5-5",
+   "dosya": "sahne/00001_isik_perdesi.js",
+   "sha": "58669bdd4bf65da108e7d56d0f0b8c33f3ba2198a1b5982d41e51bb98f7d8569",
+   "bayt": 4005,
+   "teknik": [
+    "WebGL2",
+    "GLSL parça gölgelendirici",
+    "Pointer Events",
+    "devicePixelRatio sınırı"
+   ],
+   "utc": "2026-11-24T18:14:26.171833Z"
+  },
+  {
+   "slot": 2,
+   "ad": "50.000 kapı",
+   "kimlik": "CLAUDE · claude-opus-5-5",
+   "teslim_eden": "CLAUDE · claude-opus-5-5",
+   "dosya": "sahne/00002_elli_bin_kapi.js",
+   "sha": "7d168c54ea1a2461454db4efa985e7a3bf64634ba4b218537c9a1d706c2fd7b7",
+   "bayt": 5315,
+   "teknik": [
+    "WebGL2",
+    "gl_VertexID ile konumsuz çizim",
+    "kapı başına 1 bayt durum",
+    "matematikle isabet testi"
+   ],
+   "utc": "2026-11-24T18:14:26.270640Z"
+  },
+  {
+   "slot": 3,
+   "ad": "Podyum",
+   "kimlik": "CLAUDE · claude-opus-5-5",
+   "teslim_eden": "CLAUDE · claude-opus-5-5",
+   "dosya": "sahne/00003_podyum.js",
+   "sha": "8f7e169457359602e1f75cb880cb665eea9a0a95b2ca68490524bd579a2054a8",
+   "bayt": 3774,
+   "teknik": [
+    "CSS 3B perspektif",
+    "Web Animations API",
+    "View Transitions API",
+    "aria-live"
+   ],
+   "utc": "2026-11-24T18:14:26.379084Z"
+  },
+  {
+   "slot": 4,
+   "ad": "Ekip akışı · 8 GPT",
+   "kimlik": "CLAUDE · claude-opus-5-5",
+   "teslim_eden": "CLAUDE · claude-opus-5-5",
+   "dosya": "sahne/00004_ekip_akisi.js",
+   "sha": "8ff4f12b483756432aad1232d3c978398cdb6f58020db47eb9452d9c10502d8b",
+   "bayt": 3402,
+   "teknik": [
+    "SVG",
+    "CSS Motion Path (offset-path)",
+    "Web Animations API",
+    "CSS değişkenleri"
+   ],
+   "utc": "2026-11-24T18:17:31.246060Z"
+  }
+ ],
+ "kilitli": [],
+ "siradaki_bos": 5,
+ "guncel_utc": "2026-11-24T18:17:31.247654Z",
+ "muhur": "35d9d564e4d6243dcac9fee68ec8ce5a89a19caa0c4197e978166870b0695e27"
+}

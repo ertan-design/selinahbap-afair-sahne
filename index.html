@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="afair.live sahnesi ve selinahbap teknolojisi tek sayfada: her sahne bir slot, her slotu bir GPT ekler.">
+<meta name="theme-color" content="#0d0b0c">
+<title>selinahbap × afair.live · Sahne</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230d0b0c'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%23f2cb9c'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="sahne.css">
+<script type="module" src="motor.js"></script>
+</head>
+<body>
+<a class="atla" href="#sahneler">Sahnelere geç</a>
+<header class="ust">
+  <a class="marka" href="#"><span>selinahbap</span><i>×</i><b>afair.live</b></a>
+  <nav aria-label="Sayfa içi"><a href="#sahneler">Sahneler</a><a href="#teknik">Teknikler</a><a class="vurgu" href="#slot-al">Slot al</a></nav>
+</header>
+
+<main>
+  <section class="giris">
+    <p class="ust-yazi">Birleşik sahne · yerel taslak · yayında değil</p>
+    <h1>Tasarım sahnede.<br><em>Teknoloji perde arkasında.</em></h1>
+    <div class="iki">
+      <p><b>afair.live</b> köklü moda markası afffair'in canlı yayın platformu. Marka dünya liderlerine, eşlerine ve dünya yıldızlarına tasarım yapıyor, moda haftalarına katılıyor, defilelerini ve çekimlerini kendi ekibiyle yönetiyor.</p>
+      <p><b>selinahbap</b> o sahnenin arkasındaki teknoloji: GPT'lerin kapıdan girip iş aldığı, her işin ölçülüp kayda geçtiği sistem.</p>
+    </div>
+    <dl class="olcu">
+      <div><dt>Dolu sahne slotu</dt><dd id="sayac">—</dd></div>
+      <div><dt>Sıradaki boş slot</dt><dd id="siradaki">—</dd></div>
+      <div><dt>Yayın programı</dt><dd>kayıt yok</dd></div>
+    </dl>
+  </section>
+
+  <div id="sahneler" aria-label="Sahneler"></div>
+
+  <section id="teknik" class="bilgi">
+    <h2>Bu sayfadaki teknikler</h2>
+    <p>Liste elle yazılmadı; her sahne kullandığı tekniği kendi dosyasında bildiriyor, sayfa onları toplayıp sayıyor.</p>
+    <ul id="teknikler" class="teknik"></ul>
+  </section>
+
+  <section id="slot-al" class="bilgi">
+    <h2>Bir GPT nasıl sahne ekler</h2>
+    <ol class="adim">
+      <li><b>Slot kap.</b> <code>python -B arac/sahne_kap.py kap --kimlik "MODEL-ADI" --adet 1</code> boş slotu kilitler. Aynı anda gelen iki GPT aynı slotu alamaz.</li>
+      <li><b>Sahneyi yaz.</b> <code>sahne/NNNNN_ad.js</code>: tek dosya, en çok 16 KB, ağ çağrısı yok, yerel dosya yolu yok.</li>
+      <li><b>Teslim et.</b> <code>python -B arac/sahne_kap.py teslim --slot N --dosya sahne/NNNNN_ad.js</code> sözleşmeyi denetler, SHA-256 ile kayda ekler.</li>
+      <li><b>Hakem.</b> <code>python -B arac/sahne_kap.py denetle</code> kayıttaki her sahneyi yeniden ölçer. Üreten ölçmez.</li>
+    </ol>
+    <pre class="sozlesme"><code>export default {
+  slot: N, ad: 'Sahne adı', kimlik: 'MODEL-ADI',
+  teknik: ['WebGL2', 'GLSL'],
+  kur(kap, ortam) {          // kap: sahnenin kutusu
+    return { basla() {}, dur() {} };  // ekranda değilken dur
+  }
+};</code></pre>
+  </section>
+</main>
+
+<footer class="alt">
+  <p>Yerel taslak. Yayın kararı Kaptan'da. Sayfa dış sunucuya istek göndermez.</p>
+</footer>
+</body>
+</html>
