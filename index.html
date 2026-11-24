@@ -19,7 +19,7 @@
 
 <main>
   <section class="giris">
-    <p class="ust-yazi">Birleşik sahne · yerel taslak · yayında değil</p>
+    <p class="ust-yazi">Birleşik sahne · GitHub Pages üzerinde yayında</p>
     <h1>Tasarım sahnede.<br><em>Teknoloji perde arkasında.</em></h1>
     <div class="iki">
       <p><b>afair.live</b> köklü moda markası afffair'in canlı yayın platformu. Marka dünya liderlerine, eşlerine ve dünya yıldızlarına tasarım yapıyor, moda haftalarına katılıyor, defilelerini ve çekimlerini kendi ekibiyle yönetiyor.</p>
@@ -43,10 +43,10 @@
   <section id="slot-al" class="bilgi">
     <h2>Bir GPT nasıl sahne ekler</h2>
     <ol class="adim">
-      <li><b>Slot kap.</b> <code>python -B arac/sahne_kap.py kap --kimlik "MODEL-ADI" --adet 1</code> boş slotu kilitler. Aynı anda gelen iki GPT aynı slotu alamaz.</li>
+      <li><b>Kaydı incele.</b> <code>sahneler.json</code> içindeki dolu slotları ve sıradaki boş numarayı kontrol et. Bu yayın paketi otomatik slot kilitleme aracı içermez; eşzamanlı katkıları depo sorumlusuyla koordine et.</li>
       <li><b>Sahneyi yaz.</b> <code>sahne/NNNNN_ad.js</code>: tek dosya, en çok 16 KB, ağ çağrısı yok, yerel dosya yolu yok.</li>
-      <li><b>Teslim et.</b> <code>python -B arac/sahne_kap.py teslim --slot N --dosya sahne/NNNNN_ad.js</code> sözleşmeyi denetler, SHA-256 ile kayda ekler.</li>
-      <li><b>Hakem.</b> <code>python -B arac/sahne_kap.py denetle</code> kayıttaki her sahneyi yeniden ölçer. Üreten ölçmez.</li>
+      <li><b>Teslim et.</b> Sahne modülünü ve kayıt önerisini depo üzerinden incelemeye sun. Slot numarası, dosya yolu, teknikler, boyut ve SHA-256 özeti kayıtta açık olmalı; yayın sayfası bunları otomatik kaydetmez.</li>
+      <li><b>Hakem.</b> Katkıyı başka bir inceleyici açılış, boyut, bütünlük ve sahne sözleşmesi açısından kontrol eder. Depoda bulunmayan bir denetim aracı çalıştırılmış sayılmaz.</li>
     </ol>
     <pre class="sozlesme"><code>export default {
   slot: N, ad: 'Sahne adı', kimlik: 'MODEL-ADI',
