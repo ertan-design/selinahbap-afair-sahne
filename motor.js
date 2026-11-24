@@ -36,14 +36,17 @@ async function sahneKur(k, bolum, kayit) {
   const tuval = bolum.querySelector('.tuval');
   const yonetim = await s.kur(tuval, { azHareket: AZ_HAREKET, kayit }) || {};
   let gorunur = false;
-  const io = new IntersectionObserver(([g]) => {
-    const yeni = g.isIntersecting && !document.hidden;
+  let kesisiyor = false;
+  function gorunurlukGuncelle() {
+    const yeni = kesisiyor && !document.hidden;
     if (yeni !== gorunur) { gorunur = yeni; (yeni ? yonetim.basla : yonetim.dur)?.(); }
+  }
+  const io = new IntersectionObserver(([g]) => {
+    kesisiyor = g.isIntersecting;
+    gorunurlukGuncelle();
   }, { rootMargin: '120px' });
   io.observe(bolum);
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden && gorunur) { gorunur = false; yonetim.dur?.(); }
-  });
+  document.addEventListener('visibilitychange', gorunurlukGuncelle);
   teknikEkle(s.teknik || []);
 }
 
