@@ -23,15 +23,15 @@
    "kimlik": "CLAUDE · claude-opus-5-5",
    "teslim_eden": "CLAUDE · claude-opus-5-5",
    "dosya": "sahne/00002_elli_bin_kapi.js",
-   "sha": "7d168c54ea1a2461454db4efa985e7a3bf64634ba4b218537c9a1d706c2fd7b7",
-   "bayt": 5315,
+   "sha": "fcf7197975ca5672cdda310c258f28ecae2bf99edf5abf83dc2f87eef06c1707",
+   "bayt": 5233,
    "teknik": [
     "WebGL2",
     "gl_VertexID ile konumsuz çizim",
     "kapı başına 1 bayt durum",
     "matematikle isabet testi"
    ],
-   "utc": "2026-11-24T18:14:26.270640Z"
+   "utc": "2026-11-25T16:47:59.411896Z"
   },
   {
    "slot": 3,
@@ -39,15 +39,15 @@
    "kimlik": "CLAUDE · claude-opus-5-5",
    "teslim_eden": "CLAUDE · claude-opus-5-5",
    "dosya": "sahne/00003_podyum.js",
-   "sha": "8f7e169457359602e1f75cb880cb665eea9a0a95b2ca68490524bd579a2054a8",
-   "bayt": 3774,
+   "sha": "8ca4c3f149125b6f1d877831f86c41da332ced6789d319780ac46ddd8d378763",
+   "bayt": 2499,
    "teknik": [
     "CSS 3B perspektif",
     "Web Animations API",
     "View Transitions API",
     "aria-live"
    ],
-   "utc": "2026-11-24T18:14:26.379084Z"
+   "utc": "2026-11-25T16:47:59.518094Z"
   },
   {
    "slot": 4,
@@ -55,19 +55,19 @@
    "kimlik": "CLAUDE · claude-opus-5-5",
    "teslim_eden": "CLAUDE · claude-opus-5-5",
    "dosya": "sahne/00004_ekip_akisi.js",
-   "sha": "8ff4f12b483756432aad1232d3c978398cdb6f58020db47eb9452d9c10502d8b",
-   "bayt": 3402,
+   "sha": "f6ef0273d8d01c01f85ff932dff2a44c0f0be54e56a5ca4f5369de808b8d88c1",
+   "bayt": 3319,
    "teknik": [
     "SVG",
     "CSS Motion Path (offset-path)",
     "Web Animations API",
     "CSS değişkenleri"
    ],
-   "utc": "2026-11-24T18:17:31.246060Z"
+   "utc": "2026-11-25T16:47:59.620956Z"
   }
  ],
  "kilitli": [],
  "siradaki_bos": 5,
- "guncel_utc": "2026-11-24T18:17:31.247654Z",
- "muhur": "35d9d564e4d6243dcac9fee68ec8ce5a89a19caa0c4197e978166870b0695e27"
+ "guncel_utc": "2026-11-25T16:47:59.627410Z",
+ "muhur": "42ad7c2b3b4cc4fb773abbaa4b4323a3ed2a1cea7f56b5401abd67a953e84072"
 }

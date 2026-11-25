@@ -53,7 +53,7 @@ async function sahneKur(k, bolum, kayit) {
 async function ac() {
   let kayit;
   try {
-    kayit = await (await fetch('sahneler.json', { cache: 'no-store' })).json();
+    kayit = await (await fetch(new URL('sahneler.json', import.meta.url), { cache: 'no-store' })).json();
   } catch {
     kutu.innerHTML = '<p class="uyari">Sahne kaydı okunamadı. Sayfa bir sunucudan açılmalı (dosya:// değil).</p>';
     return;

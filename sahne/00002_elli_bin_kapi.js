@@ -32,9 +32,10 @@ export default {
     const bilgi = new Map();
     for (const n of kayit.kilitli || []) if (n >= 1 && n <= TOPLAM) durum[n - 1] = 1;
     for (const s of kayit.sahneler) { durum[s.slot - 1] = 2; bilgi.set(s.slot, s); }
-    kap.innerHTML = '<canvas style="display:block;width:100%;cursor:crosshair" role="img" aria-label="50.000 sahne slotunun durum haritası"></canvas>' +
-      '<p class="etiket" style="margin:0;padding:.6rem 1rem;color:var(--soluk);min-height:2.6em" aria-live="polite"></p>' +
-      '<p style="margin:0;padding:0 1rem .9rem;font-size:.8rem;color:var(--soluk)"><span style="color:var(--altin)">●</span> dolu · <span style="color:var(--turkuaz)">●</span> kilitli · <span style="color:#3f8f80">●</span> boş — üstüne gel.</p>';
+    // CSP style-src 'self': satır içi stil yok, görünüm sahne.css'teki s2-* sınıflarında
+    kap.innerHTML = '<canvas class="s2-tuval" role="img" aria-label="50.000 sahne slotunun durum haritası"></canvas>' +
+      '<p class="etiket s2-etiket" aria-live="polite"></p>' +
+      '<p class="s2-lejant"><span class="r-altin">●</span> dolu · <span class="r-turkuaz">●</span> kilitli · <span class="r-bos">●</span> boş — üstüne gel.</p>';
     const tuval = kap.querySelector('canvas'), etiket = kap.querySelector('.etiket');
     const gl = tuval.getContext('webgl2', { antialias: false, powerPreference: 'low-power' });
     let izgara = [400, 125];

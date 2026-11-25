@@ -79,3 +79,29 @@ h1 em { font-style: normal; background: linear-gradient(90deg, var(--turkuaz), v
   html { scroll-behavior: auto; }
   .giris::before { animation: none; }
 }
+
+/* sahne 3 · podyum (önceden satır içi <style>; CSP 'self' için buraya taşındı) */
+.pd{position:relative;height:clamp(17rem,42vw,26rem);overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#2a1c18,#0d0b0c 70%);perspective:700px}
+.pd-yol{position:absolute;left:50%;bottom:-10%;width:min(46%,22rem);height:140%;transform:translateX(-50%) rotateX(68deg);transform-origin:50% 100%;
+  background:repeating-linear-gradient(0deg,#f2cb9c18 0 2px,transparent 2px 46px),linear-gradient(90deg,#1b1415,#3a2a24 50%,#1b1415);border-inline:2px solid #f2cb9c55}
+.pd-isik{position:absolute;top:-20%;width:38%;height:140%;background:linear-gradient(180deg,#f2cb9c40,transparent 75%);filter:blur(14px);transform-origin:50% 0;mix-blend-mode:screen}
+.pd-yazi{position:absolute;left:1rem;right:1rem;bottom:1rem;display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap}
+.pd-yazi h3{margin:0;font:400 clamp(1.3rem,3.4vw,2.4rem) Georgia,serif;view-transition-name:pd-baslik}
+.pd-yazi p{margin:.2rem 0 0;color:var(--soluk);max-width:38ch;view-transition-name:pd-not}
+.pd-dugme{display:flex;gap:.4rem;flex-wrap:wrap}
+.pd-dugme button{font:inherit;font-size:.82rem;color:var(--yazi);background:#1d1617cc;border:1px solid var(--cizgi);border-radius:99px;padding:.3rem .8rem;cursor:pointer}
+.pd-dugme button[aria-pressed=true]{background:var(--altin);color:#140f0f;border-color:var(--altin)}
+.pd-sol{left:4%}
+.pd-sag{right:4%}
+/* sahne 2 · 50.000 kapı */
+.s2-tuval{display:block;width:100%;cursor:crosshair}
+.s2-etiket{margin:0;padding:.6rem 1rem;color:var(--soluk);min-height:2.6em}
+.s2-lejant{margin:0;padding:0 1rem .9rem;font-size:.8rem;color:var(--soluk)}
+.r-altin{color:var(--altin)}
+.r-turkuaz{color:var(--turkuaz)}
+.r-bos{color:#3f8f80}
+/* sahne 4 · ekip akışı */
+.s4-svg{display:block;width:100%;height:auto}
+.s4-ak{position:relative;padding:1rem 1rem .4rem}
+.s4-paket{position:absolute;inset:1rem 1rem .4rem;pointer-events:none}
+.s4-not{margin:0;padding:.2rem 1rem 1rem;color:var(--soluk);font-size:.86rem}

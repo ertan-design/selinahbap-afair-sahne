@@ -13,15 +13,16 @@ export default {
     const G = Math.max(320, Math.min(1200, Math.round(kap.clientWidth - 32) || 760)), Y = 300, sol = 30, sag = G - 30;
     const x = i => sol + i * (sag - sol) / (ISTASYON.length - 1);
     const seritY = s => 40 + s * (Y - 80) / 7;
-    let svg = `<svg viewBox="0 0 ${G} ${Y}" style="display:block;width:100%;height:auto" role="img" aria-label="Sekiz GPT şeridi ve beş istasyon">`;
+    let svg = `<svg viewBox="0 0 ${G} ${Y}" class="s4-svg" role="img" aria-label="Sekiz GPT şeridi ve beş istasyon">`;
     for (let s = 0; s < 8; s++) svg += `<line x1="${sol}" y1="${seritY(s)}" x2="${sag}" y2="${seritY(s)}" stroke="#3b302c" stroke-width="1"/>`;
     ISTASYON.forEach((ad, i) => {
       svg += `<line x1="${x(i)}" y1="24" x2="${x(i)}" y2="${Y - 24}" stroke="${i === 3 ? '#7fffd4' : '#5a4a42'}" stroke-dasharray="3 5"/>` +
         `<text x="${x(i)}" y="16" fill="${i === 4 ? '#f2cb9c' : '#b9aca1'}" font-size="13" text-anchor="middle">${ad}</text>`;
     });
     svg += '</svg>';
-    kap.innerHTML = `<div class="ak" style="position:relative;padding:1rem 1rem .4rem">${svg}<div class="ak-paket" style="position:absolute;inset:1rem 1rem .4rem;pointer-events:none"></div></div>` +
-      `<p style="margin:0;padding:.2rem 1rem 1rem;color:var(--soluk);font-size:.86rem">Kayıttaki dolu sahne: <b style="color:var(--altin)">${kayit.sahneler.length}</b>. ` +
+    // CSP style-src 'self': satır içi stil yok, görünüm sahne.css'teki s4-* sınıflarında (paket konumu CSSOM ile)
+    kap.innerHTML = `<div class="ak s4-ak">${svg}<div class="ak-paket s4-paket"></div></div>` +
+      `<p class="s4-not">Kayıttaki dolu sahne: <b class="r-altin">${kayit.sahneler.length}</b>. ` +
       `Denetle istasyonu turkuaz: orada ölçen, üreten değil. Paketler temsilidir; gerçek iş sayısı yukarıdaki sayıdır.</p>`;
     const katman = kap.querySelector('.ak-paket');
     const animasyonlar = [];
